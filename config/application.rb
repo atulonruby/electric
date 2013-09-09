@@ -58,5 +58,11 @@ module Electric
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    unless Rails.env.production?
+      ENV["AWS_ACCESS_KEY_ID"] = 'AKIAINXHMBXIPB4STG5Q'
+      ENV["AWS_SECRET_ACCESS_KEY"] = '2wmeFsYdtcBQ/2UeJmk0iVyjm7KHBYStvLr9PnrI'
+      ENV['AWS_S3_BUCKET'] = 'Electric'
+    end
   end
 end

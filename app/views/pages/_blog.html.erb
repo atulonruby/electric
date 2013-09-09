@@ -1,8 +1,8 @@
-<% blog.each do |blog|%>
+<% @blop.each do |blog|%>
 <div class="blog">
 <h4> <%= blog.created_at%></br></h4>
 <h2><%= blog.title%></br></h2>
-<%= image_tag blog.blog_image(:medium)%></br>
+<%= image_tag blog.image_url(:thumb)%></br>
  <%= blog.body%></br>
 </div>
 <% end %>
