@@ -9,4 +9,8 @@
     <%= link_to "Rock!", '#' %>
   </p>
    <p> <%= link_to 'Sign up For NewsLetter!',  "#" , class: "btn btn-large btn-primary" %> </p>
+   
+   
+   <%= render :partial => "blog", :locals => {:blog => @blog}%>
+   
 </div>

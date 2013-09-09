@@ -1,4 +1,7 @@
 Electric::Application.routes.draw do
+  resources :blogs
+
+
   root :to => 'pages#home'
   get 'about' => 'pages#about'
  
