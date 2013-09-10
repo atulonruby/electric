@@ -1,4 +1,4 @@
-<% @blop.each do |blog|%>
+<% blogs.each do |blog|%>
 <div class="blog">
 <h4> <%= blog.created_at%></br></h4>
 <h2><%= blog.title%></br></h2>
@@ -6,3 +6,4 @@
  <%= blog.body%></br>
 </div>
 <% end %>
+

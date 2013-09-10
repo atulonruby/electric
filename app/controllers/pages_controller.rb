@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @blog = Blop.all
     @blop = Blopp.all
+    @news = News.all
   end
   
   def about
