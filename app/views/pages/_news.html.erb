@@ -1,8 +1,10 @@
-<% news.each do |news|%>
-<div class="news">
-<h4> <%= news.created_at%></br></h4>
-<h2><%= news.title%></br></h2>
-<%= image_tag news.image_url(:thumb)%></br>
- <%= news.body%></br>
+<div class="col-1-3">
+  <% news.each do |news|%>
+  <div class="news roundme" style="background-color:#FFE4E1">
+  <h4> <%= news.created_at.strftime("%B %d, %Y")%></br></h4>
+  <h2><%= news.title.capitalize%></br></h2>
+  <div class="image" style="width:330px"><%= image_tag news.image_url, :class => "img-polaroid"%></br></div>
+   <p><%= truncate(news.body, :length => 420)%></p></br>
+  </div>
+  <% end %>
 </div>
-<% end %>

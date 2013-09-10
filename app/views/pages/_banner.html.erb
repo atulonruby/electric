@@ -1,0 +1,108 @@
+
+
+<!-- Carousel
+    ================================================== -->
+<div class>
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active ">
+           <img src="../assets/examples/slide-03.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Electric Oak</h1>
+                <p class="lead">Upcoming show in October
+                  Check us out in Copper owl on 5th</p>
+              </div> 
+                </div>
+         
+        </div>
+      <div class="item">
+      <div><%= image_tag @banner[1].image_url%></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>La la la...</h1>
+            <p class="lead"></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+      <div id="first_image"><%= image_tag @banner.first.image_url%></div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div></div>
+
+
+
+<style>
+  
+ 
+ /* CUSTOMIZE THE CAROUSEL
+ -------------------------------------------------- */
+
+ /* Carousel base class */
+ .carousel {
+   margin-bottom: 60px;
+ }
+
+ .carousel .container {
+   position: relative;
+   z-index: 9;
+ }
+
+ .carousel-control {
+   height: 80px;
+   margin-top: 0;
+   font-size: 120px;
+   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+   background-color: transparent;
+   border: 0;
+   z-index: 10;
+ }
+
+ .carousel .item {
+   height: 500px;
+ }
+ .carousel img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   min-width: 100%;
+   height: 500px;
+ }
+
+ .carousel-caption {
+   background-color: transparent;
+   position: static;
+   max-width: 550px;
+   padding: 0 20px;
+   margin-top: 200px;
+   
+ }
+ .carousel-caption h1,
+ .carousel-caption .lead {
+   margin: 0;
+   line-height: 1.25;
+   color: #fff;
+   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+ }
+ .carousel-caption .btn {
+   margin-top: 10px;
+ }
+  
+
+    
+</style>
+
+
+
+
+<script>
+  !function ($) {
+    $(function(){
+      // carousel demo
+      $('#myCarousel').carousel()
+    })
+  }(window.jQuery)
+</script>

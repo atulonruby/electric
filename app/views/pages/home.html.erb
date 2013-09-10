@@ -1,7 +1,10 @@
-<div class="main">
 
-   
-  <%= render :partial => "blog", :locals => {:blogs => @blop}%>
+
+<%= render :partial => "banner" %>
+<div class="container"  >
   <%= render :partial => "news", :locals => {:news => @news}%>
-   
+  <%= render :partial => "blog", :locals => {:blogs => @blop}%>
 </div>
+
+
+
