@@ -1,7 +1,7 @@
   
   <div class="view_column">
     <% @blogs.each do |blog|%>
-    <div class="news_wrapper roundme">
+    <div class="news_wrapper blog roundme">
     <div class="dates"><h4><%= blog.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= blog.title%></h2>
     <% if !blog.image.blank?%> <div class="index_images"><%= image_tag blog.image %></div><% end%>
@@ -9,3 +9,6 @@
      </div>
     <% end %>
   </div>
+  <div class="otherpages">
+   <%= render :partial => "shared/sidebar"%>
+   </div>

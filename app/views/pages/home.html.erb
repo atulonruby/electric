@@ -4,17 +4,9 @@
 <div class="container"  >
     <%= render :partial => "news", :locals => {:news => @news}%>
     <%= render :partial => "blog", :locals => {:blogs => @blop}%>
-    
-    <div class="col-1-3 band roundme">
-        <div style="padding-bottom:50px">
-            <iframe style="border: 0; width: 350px; height: 442px;" src="http://bandcamp.com/EmbeddedPlayer/track=1003322500/size=large/bgcol=333333/linkcol=ffffff/notracklist=true/transparent=true/" seamless><a href="http://electricoak.bandcamp.com/track/bloody-feet-acoustic">Bloody Feet (acoustic) by Electric Oak</a></iframe>
-        </div>
-        
-        <div style="overflow:scroll;height:350px">
-        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ElectricOak" data-widget-id="377687615312384000">Tweets by @ElectricOak</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-    </div>
+    <%= render :partial => "shared/sidebar"%>
+   
+  
     
 </div>
 
