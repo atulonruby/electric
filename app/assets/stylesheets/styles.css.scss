@@ -35,7 +35,7 @@ display: inline;
 margin-bottom:20px;
 padding-left: 15px;
 padding-top: 3px;
-box-shadow: 2px 2px 3px 2px;
+box-shadow: 2px 2px 3px black;
 }
 
 .blog .image {
@@ -48,6 +48,12 @@ div.roundme {
 border-radius:10px;
 
  }
+ 
+.band.roundme{
+display: inline;
+width: 350px;
+overflow: hidden;
+}
  
  p{
  display: block;
