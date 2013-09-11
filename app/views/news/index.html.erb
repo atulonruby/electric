@@ -1,0 +1,12 @@
+
+  <div class="view_column">
+    <% @news.each do |news|%>
+    <div class="news_wrapper roundme">
+    <div class="dates"><h4><%= news.created_at.strftime("%B %d, %Y")%></h4></div>
+    <h2><%= news.title%></h2>
+    <% if !news.image.blank?%> <div class="index_images"><%= image_tag news.image %></div><% end%>
+    <%= news.body%>
+     </div>
+    <% end %>
+  </div>
+

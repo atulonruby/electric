@@ -1,6 +1,6 @@
 <div class="col-1-3">
   <% news.each do |news|%>
-  <div class="news roundme"  style="background:#303030" >
+  <div class="news roundme"  >
   <h4> <%= news.created_at.strftime("%B %d, %Y")%></br></h4>
   <h2><%= news.title.capitalize%></br></h2>
   <div class="image" style="width:330px;border:1px solid black"><%= image_tag news.image_url%></br></div>
@@ -10,6 +10,6 @@
 </div>
 <style>
 .news {
-  color:#FFF0F5;
+  
 }
 </style>
