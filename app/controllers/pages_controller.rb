@@ -6,5 +6,6 @@ class PagesController < ApplicationController
   end
   
   def about
+    @banner = Banner.all
   end
 end

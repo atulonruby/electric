@@ -1,6 +1,6 @@
 <div class="col-1-3">
   <% blogs.each do |blog|%>
-  <div class="blog roundme" style="background-color:#FFE4E1">
+  <div class="blog roundme" style="background:#FFF0F5" >
   <h4 > <%= blog.created_at.strftime("%B %d, %Y")%></br></h4>
   <h2><%= blog.title.capitalize%></br></h2>
   <div class="image" style="width:330px"><%= image_tag blog.image_url, :class => "img-polaroid"%></div></br>
@@ -8,3 +8,4 @@
   </div>
   <% end %>
 </div>
+
