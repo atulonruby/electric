@@ -1,8 +1,14 @@
+<div class="container">
+  <H1>IMAGE GALLERY</H1>
+  <%= render :partial => "thumbnail_gallery"%>
 
-  <ul class="pic_slider inline"></ul>
+  <div class="row-fluid"style="background-color:black;">
+    
+    <div class="gal_img"><%= image_tag @pictures[0].image.large%></div>
   
+  </div>
 
-
+</div>
 
 
 <%= javascript_tag do %>
@@ -10,11 +16,20 @@ pic = new sort_pictures(<%= @pictures.to_json.html_safe%>);
 <% end %>
 
 <style>
-/*.pic_slider{
-  width:2000px;
-}
-.pic_slider li{
-  display:inline;
-}*/
+.gal_img{
+  margin-left: 7%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 7%;
 
+}
+.gal_img img{
+  border-radius: 5px;
+}
+
+.row-fluid{
+  border-radius: 10px;
+}
 </style>
+
+

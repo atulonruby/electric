@@ -14,8 +14,7 @@ sort_pictures = function(pics){
   this.li_1.append($('<img>',{src:this.pics[2].image.thumb.url}));
   this.li_2.append($('<img>',{src:this.pics[3].image.thumb.url}));
   this.li_2.append($('<img>',{src:this.pics[4].image.thumb.url}));
-  this.slider.append(this.li_1);
-  this.slider.append(this.li_2);
+
   
   
   
