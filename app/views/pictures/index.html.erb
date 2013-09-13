@@ -1,0 +1,20 @@
+
+  <ul class="pic_slider inline"></ul>
+  
+
+
+
+
+<%= javascript_tag do %>
+pic = new sort_pictures(<%= @pictures.to_json.html_safe%>);
+<% end %>
+
+<style>
+/*.pic_slider{
+  width:2000px;
+}
+.pic_slider li{
+  display:inline;
+}*/
+
+</style>

@@ -13,8 +13,24 @@ class BanImageUploader < CarrierWave::Uploader::Base
    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
  end
 
- version :thumb do
-   process :resize_to_limit => [1322, 500]
+ version :medium do
+   process :resize_to_limit => [700, 10000]
  end
+ 
+ version :banner_med do
+   process :resize_to_limit => [846,10000]
+ end
+
+ 
+ def geometry
+     @geometry ||= get_geometry
+   end
+
+ def get_geometry
+   if @file
+    img = ::Magick::Image::read(@file.file).first
+    geometry = { width: img.columns, height: img.rows }
+   end
+  end
 
 end

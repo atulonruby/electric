@@ -16,17 +16,18 @@
                 </div>
          
         </div>
+      <% if !@banner[1].blank?%><div class="item">
+               <div><%= image_tag @banner[1].image_url%></div>
+                 <div class="container">
+                   <div class="carousel-caption">
+                     <h1>La la la...</h1>
+                     <p class="lead"></p>
+                   </div>
+                 </div>
+               </div>
+      <% end%>
       <div class="item">
-      <div><%= image_tag @banner[1].image_url%></div>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>La la la...</h1>
-            <p class="lead"></p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-      <div id="first_image"><%= image_tag @banner.first.image_url%></div>
+      <div id="first_image"><%= image_tag @banner.first.image.banner_med%></div>
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -44,9 +45,9 @@
  /* Carousel base class */
  .carousel {
    margin-bottom: 60px;
-   margin-left: 98px;
-   margin-right: 134px;
-   margin-top: 22px;
+   /*margin-left: 98px;
+      margin-right: 134px;
+      margin-top: 22px;*/
    box-shadow: 3px 3px 8px 5px;
  }
 
