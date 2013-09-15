@@ -1,0 +1,5 @@
+var x ="<%=  @picture.image.large%>";
+$('.gal_img').children('img').fadeOut("slow",function(){
+  $('.gal_img').children('img').attr("src",x);
+  $('.gal_img').children('img').fadeIn("slow");
+  });

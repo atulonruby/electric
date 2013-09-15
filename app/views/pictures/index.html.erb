@@ -1,15 +1,13 @@
 <div class="container">
   <H1>IMAGE GALLERY</H1>
-  <%= render :partial => "thumbnail_gallery"%>
 
-  <div class="row-fluid"style="background-color:black;">
-    
+  <%= render :partial => "gallery"%>
+  <div class="row-fluid loader"style="background-color:black;">
     <div class="gal_img"><%= image_tag @pictures[0].image.large%></div>
-  
   </div>
 
 </div>
-
+  
 
 <%= javascript_tag do %>
 pic = new sort_pictures(<%= @pictures.to_json.html_safe%>);

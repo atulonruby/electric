@@ -1,0 +1,72 @@
+<div class="gallery well" style="margin-top:30px">
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <% @pictures.each_slice(4) do |group| -%>
+        <%= content_tag :div, :class=> "item" do %>
+          <%= content_tag :div, :class => "row-fluid" do %>
+            <% group.each do |pic|%>
+            <div class="span3"><%= link_to (image_tag pic.image.thumb), picture_path(:id => pic),:class => "thumbnail", :remote => true%></div>
+            <% end %>
+          <% end %>
+        <% end %>
+    <% end %>
+    </div> 
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+  </div>
+</div>
+
+
+ <!-- This is just a little bit of custom CSS code to enhance things. Feel free to place this in your main CSS file. I've commented to say what each bit does. --> 
+ <style type="text/css">
+ /* Removes the default 20px margin and creates some padding space for the indicators and controls */
+ .carousel {
+ 	margin-bottom: 0;
+ 	padding: 0 40px 30px 40px;
+ }
+ /* Reposition the controls slightly */
+ .carousel-control {
+ 	left: -12px;
+ }
+ .carousel-control.right {
+ 	right: -12px;
+ }
+ /* Changes the position of the indicators */
+ .carousel-indicators {
+ 	right: 50%;
+ 	top: auto;
+ 	bottom: 0px;
+ 	margin-right: -19px;
+ }
+ /* Changes the colour of the indicators */
+ .carousel-indicators li {
+ 	background: #c0c0c0;
+ }
+ .carousel-indicators .active {
+ background: #333333;
+ }
+ .gallery.well{
+   background-color:black;
+   border:none;
+ }
+ .tab-loader {
+ width: 880px;
+ height: 430px;
+ background: transparent url(/images/loader-32-ffffff.gif) no-repeat center center;
+ }
+ </style>
+
+ <!-- Call jQuery 1.9, call bootstrap.js and run the carousel when the DOM is ready. Slide every 10 seconds. -->
+
+
+ <script type="text/javascript">
+ $(document).ready(function() {
+ 	$('#myCarousel').carousel({
+ 	interval: 10000
+ 	})
+ });
+ </script>
+
+
+
+
