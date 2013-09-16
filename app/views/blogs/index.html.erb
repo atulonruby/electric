@@ -1,10 +1,12 @@
-  
-  <div class="view_column">
+<div class="container">
+   <h1 style="margin-left:30px">Blogs</h1>
+  <div class="span8">
     <% @blogs.each do |blog|%>
-    <div class="news_wrapper blog roundme">
+    <div class="blog roundme" style="background-color:#303030;
+    color:#FFF0F5;">
     <div class="dates"><h4><%= blog.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= blog.title%></h2>
-    <% if !blog.image.blank?%> <div class="index_images"><%= image_tag blog.image %></div><% end%>
+    <% if !blog.image.blank?%> <div class=""><%= image_tag blog.image %></div><% end%>
     <%= blog.body%>
      </div>
     <% end %>
@@ -12,3 +14,4 @@
   <div class="otherpages">
    <%= render :partial => "shared/sidebar"%>
    </div>
+</div>

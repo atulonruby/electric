@@ -1,13 +1,14 @@
-<div class="view_column">
-  
-  <div class="news_wrapper roundme">
-  <div class="dates"><h4><%= @blog.created_at.strftime("%B %d, %Y")%></h4></div>
-  <h2><%= @blog.title%></h2>
-  <% if !@blog.image.blank?%> <div class="index_images"><%= image_tag @blog.image %></div><% end%>
-  <%= @blog.body%>
-   </div>
-
-</div>
-<div class="otherpages">
-<%= render :partial => "shared/sidebar"%>
+<div class="container">
+  <h1 style="margin-left:30px">Blog</h1>
+  <div class="span8">
+    <div class="blog roundme" style="background-color:#303030;color:#FFF0F5;">
+      <div class="dates"><h4><%= @blog.created_at.strftime("%B %d, %Y")%></h4></div>
+        <h2><%= @blog.title%></h2>
+        <% if !@blog.image.blank?%> <div class=""><%= image_tag @blog.image %></div><% end%>
+        <%= @blog.body%>
+      </div>
+  </div>
+  <div class="otherpages">
+    <%= render :partial => "shared/sidebar"%>
+  </div>
 </div>

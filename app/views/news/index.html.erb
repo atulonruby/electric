@@ -1,14 +1,17 @@
-
-  <div class="view_column">
+<div class="container">
+   <h1 style="margin-left:30px">News</h1>
+  <div class="span8">
     <% @news.each do |news|%>
-    <div class="news_wrapper roundme">
+    <div class="blog roundme" style="background-color:#303030;
+    color:#FFF0F5;">
     <div class="dates"><h4><%= news.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= news.title%></h2>
-    <% if !news.image.blank?%> <div class="index_images"><%= image_tag news.image %></div><% end%>
+    <% if !news.image.blank?%> <div class=""><%= image_tag news.image %></div><% end%>
     <%= news.body%>
      </div>
     <% end %>
   </div>
   <div class="otherpages">
-  <%= render :partial => "shared/sidebar"%>
-  </div>
+   <%= render :partial => "shared/sidebar"%>
+   </div>
+</div>
