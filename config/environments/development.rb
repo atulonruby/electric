@@ -34,4 +34,14 @@ Electric::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "electricoak.com",
+    :user_name            => "ajvictoria03@gmail.com",
+    :password             => "Wilson11",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
 end

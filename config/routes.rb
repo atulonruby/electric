@@ -1,4 +1,7 @@
 Electric::Application.routes.draw do
+  resources :messages
+
+
   resources :news, :blogs, :pictures
 
   root :to => 'pages#home'
