@@ -78,7 +78,7 @@ Electric::Application.configure do
       ActionMailer::Base.smtp_settings = {
          :address              => "smtp.gmail.com",
          :port                 => 587,
-         :domain               => "railscasts.com",
+         :domain               => "frozen-caverns-8896.herokuapp.com/",
          :user_name            => ENV['EMAIL'],
          :password             => ENV['EPAS'],
          :authentication       => "plain",
