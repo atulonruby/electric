@@ -64,5 +64,7 @@ module Electric
       ENV["AWS_SECRET_ACCESS_KEY"] = '2wmeFsYdtcBQ/2UeJmk0iVyjm7KHBYStvLr9PnrI'
       ENV['AWS_S3_BUCKET'] = 'Electric'
     end
+    
+    config.assets.initialize_on_precompile = false
   end
 end
