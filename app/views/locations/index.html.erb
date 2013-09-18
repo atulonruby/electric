@@ -1,0 +1,38 @@
+ <div class="container">
+   <h1 style="margin-left:30px">Upcoming Shows</h1>
+   <div class="span7">
+      <% @locations.each do |location| %>
+        <div class="news roundme"  >
+        <h4><%= location.title%></h4>
+        <p> <%= location.description %></p>
+        <p><b>Date:</b> <%= location.date.strftime("%B %d, %Y")%></p>
+        <p class="elec"><%= link_to "Click here to Contact Electric Oak!", new_message_path%></p>
+        <p>
+          <b>Address:</b>
+          <%= location.address %>
+        </p>
+        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{location.latitude },#{location.longitude}8&zoom=16&size=300x300&sensor=false&markers=#{location.latitude}%2C#{location.longitude}", :class => 'google-image'%>
+ 
+        <p style="color:white;padding-bottom:2%">Electric Oak</p>
+        </div>
+      <% end %>
+    </div>
+  <div class="otherpages">
+     <%= render :partial => "shared/sidebar"%>
+   </div>
+</div>
+
+
+<style>
+  .google-image{
+    margin-bottom: 3%;
+  }
+  .elec a {
+   color:white;
+  }
+</style>
+
+
+
+
+

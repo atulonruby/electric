@@ -6,7 +6,7 @@ gem 'aws-sdk'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
-
+gem 'geocoder'
 group :development, :test do
 gem 'sqlite3'
 end

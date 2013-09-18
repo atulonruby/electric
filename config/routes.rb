@@ -1,4 +1,7 @@
 Electric::Application.routes.draw do
+  resources :locations
+
+
   resources :messages
 
 
