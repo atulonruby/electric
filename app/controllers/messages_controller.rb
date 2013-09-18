@@ -26,11 +26,10 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.valid?
         UserMailer.registration_confirmation(@message).deliver
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { redirect_to @message, notice: 'Message was successfully sent.' }
         format.json { render json: @message, status: :created, location: @message }
       else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.html { render action: "new",notice: 'Please try again'  }
       end
     end
   end
