@@ -1,0 +1,8 @@
+var x = '<%= @context%>';
+if(x === "try again"){
+ alert("Make sure email address is correct");
+}
+else{
+ alert('Thank you!. Will get in touch soon!');
+ $('.news .panel_contact').each(function(){$(this).slideUp().removeClass('show')});
+}

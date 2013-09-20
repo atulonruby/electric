@@ -6,7 +6,10 @@
         <h4><%= location.title%></h4>
         <p> <%= location.description %></p>
         <p><b>Date:</b> <%= location.date.strftime("%B %d, %Y")%></p>
-        <p class="elec"><%= link_to "Click here to Contact Electric Oak!", new_message_path%></p>
+        <p class="elec" id="elec"><%= link_to "Click here to Contact for tickets!", "javascript:void(0)"%></p>
+        <div class="roundme panel_contact" id="panel" style="">
+          <%= render partial: "contact_form" , :locals => {:title => location.title}%>
+          </div>
         <p>
           <b>Address:</b>
           <%= location.address %>
@@ -30,7 +33,20 @@
   .elec a {
    color:white;
   }
+  .panel_contact{
+    background:white;
+    display:none;
+    color:black;
+  }
+  .panel_contact form{
+    margin-left: 4%;
+    padding-bottom: 1%;
+  }
 </style>
+
+<script>
+ panel($('.span7'));
+</script>
 
 
 

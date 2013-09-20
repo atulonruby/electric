@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
-
+    @message = Message.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
@@ -80,4 +80,17 @@ class LocationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def message
+   @message = Message.new(params[:message]) 
+   @context = "why me"
+   if @message.valid?
+     UserMailer.registration_confirmation(@message).deliver
+     @context = "success"
+   else
+     @context = "try again"
+   end
+ end
+     
+
 end

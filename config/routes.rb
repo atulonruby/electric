@@ -1,5 +1,9 @@
 Electric::Application.routes.draw do
-  resources :locations
+  resources :locations do
+   collection do
+    post 'message'
+   end
+  end
 
 
   resources :messages
