@@ -1,11 +1,4 @@
 Electric::Application.routes.draw do
-  resources :locations do
-   collection do
-    post 'message'
-   end
-  end
-
-
   resources :messages
 
 
@@ -13,6 +6,17 @@ Electric::Application.routes.draw do
 
   root :to => 'pages#home'
   get 'about' => 'pages#about'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  resources :locations do
+   collection do
+    post 'message'
+   end
+  end
+
+
+  
  
 
   # The priority is based upon order of creation:

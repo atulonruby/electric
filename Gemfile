@@ -7,6 +7,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
 gem 'geocoder'
+gem 'activeadmin'
 
 group :development, :test do
 gem 'sqlite3'
@@ -23,4 +24,4 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.2.2.0'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
