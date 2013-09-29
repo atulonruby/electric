@@ -1,4 +1,4 @@
-<div class="span4" style="margin-left: 20px;">
+<div class="span4">
   <% blogs.each do |blog|%>
   <div class="blog roundme" style="background:black" >
   <h4 > <%= blog.created_at.strftime("%B %d, %Y")%></br></h4>
@@ -12,5 +12,8 @@
 <style>
 .blog {
   color:#FFF0F5;
+}
+.span4{
+  margin-left: 2%;
 }
 </style>
