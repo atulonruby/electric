@@ -5,7 +5,7 @@ $btnPrimaryBackground: purple;
 @import 'bootstrap';
 body{
     padding-top: 60px;
-    background:url('wood.jpg');
+    background:url('pg.jpg');
     background-attachment:fixed;
     background-size:cover;
 }
@@ -40,8 +40,8 @@ padding-right: 15px;
 box-shadow: 2px 2px 3px black;
 }
 
-.news,.news_wrapper{
-background-color:#303030;
+.news,.blog,.news_wrapper{
+background-color:rgba(48,48,48,0.8);
 color:#FFF0F5;
 }
 .news_wrapper{

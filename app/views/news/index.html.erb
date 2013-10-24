@@ -2,7 +2,7 @@
    <h1 style="margin-left:30px">News</h1>
   <div class="span8">
     <% @news.each do |news|%>
-    <div class="blog roundme" style="background-color:#303030;
+    <div class="blog roundme" style="background-color:rgba(48,48,48,0.8);
     color:#FFF0F5;">
     <div class="dates"><h4><%= news.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= news.title%></h2>
