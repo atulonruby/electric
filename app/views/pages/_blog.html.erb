@@ -2,7 +2,7 @@
   <% blogs.each do |blog|%>
   <div class="blog roundme" style="background:black" >
   <h4 > <%= blog.created_at.strftime("%B %d, %Y")%></br></h4>
-  <h2><%= blog.title.capitalize%></br></h2>
+  <h2><%= blog.title%></br></h2>
   <% if !blog.image.blank?%> <div style="border:1px solid black"><%= image_tag blog.image_url%></div></br><% end%>
    <p><%= truncate(blog.body, :length => 420)%></p></br>
     <div class="readme "><p><%= link_to "read more..", blog_path(:id => blog.id)%></p></div>
