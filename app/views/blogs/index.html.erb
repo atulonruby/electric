@@ -7,7 +7,7 @@
     <div class="dates"><h4><%= blog.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= blog.title%></h2>
     <% if !blog.image.blank?%> <div class="padder"><%= image_tag blog.image %></div><% end%>
-    <div class="padder"><%= blog.body%></div>
+    <div class="padder"><%= mac_format blog.body%></div>
      </div>
     <% end %>
   </div>

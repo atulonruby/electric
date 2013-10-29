@@ -4,7 +4,7 @@
   <h4 > <%= blog.created_at.strftime("%B %d, %Y")%></br></h4>
   <h2><%= blog.title%></br></h2>
   <% if !blog.image.blank?%> <div style="border:1px solid black"><%= image_tag blog.image_url%></div></br><% end%>
-   <p><%= truncate(blog.body, :length => 420)%></p></br>
+   <p><%= mac_format(truncate(blog.body, :length => 420))%></p></br>
     <div class="readme "><p><%= link_to "read more..", blog_path(:id => blog.id)%></p></div>
   </div>
   <% end %>

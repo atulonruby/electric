@@ -7,7 +7,7 @@
     <div class="dates"><h4><%= news.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= news.title%></h2>
     <% if !news.image.blank?%> <div class="padder"><%= image_tag news.image %></div><% end%>
-    <div class="padder"><%= news.body%></div>
+    <div class="padder"><%= mac_format(news.body)%></div>
      </div>
     <% end %>
   </div>
