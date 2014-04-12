@@ -1,6 +1,6 @@
 <div class="span4">
   <% blogs.each_with_index do |blog,index|%>
-   <%= content_tag :h1, "Blogs" if index == 0%>
+   <%= content_tag :h1, "Blog" if index == 0%>
   <div class="blog roundme" >
   <h4 > <%= blog.created_at.strftime("%B %d, %Y")%></br></h4>
   <h2><%= blog.title%></br></h2>

@@ -5,9 +5,10 @@ $btnPrimaryBackground: purple;
 @import 'bootstrap';
 body{
     padding-top: 60px;
-    background:url('pg.jpg');
+    /*background:url('pg.jpg');*/
     background-attachment:fixed;
     background-size:cover;
+    background-color:#7E6161;
 }
 
 @import 'bootstrap-responsive';
@@ -107,6 +108,9 @@ background:url('loader.gif') no-repeat center center;
   padding-bottom: 1%;
 }
 
+.span8{
+margin-left:0px;
+}
 
 @media (max-width: 978px) {
     .container {
