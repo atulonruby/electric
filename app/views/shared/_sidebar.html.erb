@@ -1,8 +1,11 @@
  <div class="pull-right">
    <div>
-  <%= image_tag "insta.png", :height => "60px", :width => "60px"%>
-  <%= image_tag "black_facebook.png", :height => "60px", :width => "60px" %>
-  <%= image_tag "twitter_black.png", :height => "60px", :width => "60px"%>
+  <%= image_tag "insta.png", :height => "60px", :width => "60px", :class => "instagram_image"%>
+  <%= image_tag "black_facebook.png", :height => "60px", :width => "60px", :class => "facebook_image"%>
+  <%= image_tag "twitter_black.png", :height => "60px", :width => "60px", :class => "twitter_image"%>
+  <%= link_to "","https://www.facebook.com/ElectricOak", :class => "facebook_link"%>
+  <%= link_to "","http://instagram.com/electricoak", :class => "instagram_link"%>
+  <%= link_to "","https://twitter.com/ElectricOak", :class => "twitter_link"%>
    </div>
       <div class="box">
           <iframe style="border: 0; width: 346px; height: 520px;" src="http://bandcamp.com/EmbeddedPlayer/album=3309672588/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="http://electricoak.bandcamp.com/album/electric-oak-2">Electric Oak by Electric Oak</a></iframe>
@@ -23,6 +26,18 @@
     
 </div>
 
+<%= javascript_tag do %>
+$('.facebook_image').bind("click", function(){
+ $('.facebook_link')[0].click()
+})
+$('.instagram_image').bind("click", function(){
+ $('.instagram_link')[0].click()
+})
+$('.twitter_image').bind("click", function(){
+ $('.twitter_link')[0].click()
+})
+<% end %>
+
 <style>
 
 .box{
@@ -35,6 +50,9 @@
   padding-top: 7px;
   border-radius: 10px;
   
+}
+.facebook_image,.twitter_image,.instagram_image{
+  cursor: pointer;
 }
 
 
