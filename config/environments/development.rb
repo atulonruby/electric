@@ -39,8 +39,8 @@ Electric::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => "electricoak.com",
-    :user_name            => "ajvictoria03@gmail.com",
-    :password             => "Wilson11",
+    :user_name            => "",
+    :password             => "",
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
