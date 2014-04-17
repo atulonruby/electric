@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
 
   def index
-    @old_locations = Location.happening_before(Time.zone.now).sort_by(&:date)
+    @old_locations = Location.happening_before(Time.zone.now).sort_by(&:date).reverse!
     @locations = Location.happening_after(Time.zone.now).sort_by(&:date)
     @message = Message.new
     respond_to do |format|
