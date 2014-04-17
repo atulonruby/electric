@@ -1,4 +1,5 @@
 <div class="container">
+  <%= render :partial => "shared/sidebar"%>
    <h1>News</h1>
   <div class="span8">
     <% @news.each do |news|%>
@@ -11,9 +12,6 @@
      </div>
     <% end %>
   </div>
-
-   <%= render :partial => "shared/sidebar"%>
-
 </div>
 
 

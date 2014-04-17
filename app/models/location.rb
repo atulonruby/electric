@@ -4,4 +4,7 @@ class Location < ActiveRecord::Base
   before_validation :geocode, :if => :address_changed?
   validates :latitude, presence: true
   validates :longitude, presence: true
+  
+  scope :happening_before, lambda { |time| where("date < ?", time) }
+  scope :happening_after, lambda { |time| where("date > ?", time) }
 end

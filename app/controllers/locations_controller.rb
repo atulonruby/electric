@@ -1,7 +1,8 @@
 class LocationsController < ApplicationController
 
   def index
-    @locations = Location.all
+    @old_locations = Location.happening_before(Time.zone.now).sort_by(&:date)
+    @locations = Location.happening_after(Time.zone.now).sort_by(&:date)
     @message = Message.new
     respond_to do |format|
       format.html # index.html.erb
