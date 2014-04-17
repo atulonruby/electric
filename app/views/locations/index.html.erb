@@ -3,7 +3,9 @@
       <%= render :partial => "shared/sidebar"%>
     </div>
    <div class="span7">
-     <h1>Upcoming Shows</h1>
+     <% if @locations.count > 0 %>
+      <h1>Upcoming Shows</h1>
+     <% end %>
       <% @locations.each do |location| %>
         <div class="news roundme"  >
         <h4><%= location.title%></h4>
@@ -26,7 +28,9 @@
       
    
      <div class="span7">
-       <h1>Past Shows</h1>
+       <% if @old_locations.count > 0 %>
+        <h1>Past Shows</h1>
+        <% end %>
         <% @old_locations.each do |location| %>
           <div class="news roundme"  >
           <h4><%= location.title%></h4>
