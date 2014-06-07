@@ -1,12 +1,11 @@
-<div class="container">
+<div class="container blog_index">
   <div class="otherpages">
    <%= render :partial => "shared/sidebar"%>
    </div>
    <h1>Blog</h1>
   <div class="span8">
     <% @blogs.each do |blog|%>
-    <div class="blog roundme" style="background-color:rgba(48,48,48,0.8);
-    color:#FFF0F5;">
+    <div class="blog roundme">
     <div class="dates"><h4><%= blog.created_at.strftime("%B %d, %Y")%></h4></div>
     <h2><%= blog.title%></h2>
     <% if !blog.image.blank?%> <div class="padder"><%= image_tag blog.image %></div><% end%>
