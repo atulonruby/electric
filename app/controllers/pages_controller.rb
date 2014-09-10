@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @blop = Blopp.all
-    @news = News.all
+    @blop = Blopp.all.sort_by &:created_at
+    @news = News.all.sort_by &:created_at
     @banner = Banner.first
   end
   

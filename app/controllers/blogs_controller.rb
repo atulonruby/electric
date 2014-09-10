@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-     @blogs = Blopp.all
+     @blogs = Blopp.all.sort_by &:created_at
   end
   
   def show

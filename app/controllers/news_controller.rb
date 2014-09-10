@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-    @news = News.all
+    @news = News.all.sort_by &:created_at
   end
   
   def show
