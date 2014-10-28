@@ -1,4 +1,4 @@
-<div class="span4">
+<div class="span4 bog_div">
   <% blogs.each_with_index do |blog,index|%>
    <%= content_tag :h1, "Blog" if index == 0%>
   <div class="blog roundme" >
@@ -10,11 +10,3 @@
   </div>
   <% end %>
 </div>
-<style>
-.blog {
-  color:#FFF0F5;
-}
-.span4{
-  margin-left: 2%;
-}
-</style>

@@ -3,7 +3,7 @@
 
   <%= render :partial => "gallery"%>
   <div class="row-fluid loader"style="background-color:black;">
-    <div class="gal_img"><%= image_tag @pictures[0].image.large%></div>
+    <div class="gal_img picture"><%= image_tag @pictures[0].image.large%></div>
   </div>
 
 </div>
@@ -12,23 +12,5 @@
 <%= javascript_tag do %>
 pic = new sort_pictures(<%= @pictures.to_json.html_safe%>);
 <% end %>
-
-<style>
-.gal_img{
-  margin-left: 7%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-right: 7%;
-
-}
-.gal_img img{
-  border-radius: 5px;
-}
-
-.row-fluid{
-  border-radius: 10px;
-}
-
-</style>
 
 
