@@ -3,54 +3,14 @@
       <%= render :partial => "shared/sidebar"%>
     </div>
    <div class="span7">
-     <% if @locations.count > 0 %>
-      <h1>Upcoming Shows</h1>
-     <% end %>
-      <% @locations.each do |location| %>
-        <div class="news roundme"  >
-        <h4><%= location.title%></h4>
-        <p> <%= location.description %></p>
-        <p><b>Date:</b> <%= location.date.strftime("%B %d, %Y")%></p>
-        <p class="elec" id="elec"><%= link_to "Click here to Contact for tickets!", "javascript:void(0)"%></p>
-        <div class="roundme panel_contact" id="panel" style="">
-          <%= render partial: "contact_form" , :locals => {:title => location.title}%>
-          </div>
-        <p>
-          <b>Address:</b>
-          <%= location.address %>
-        </p>
-        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{location.latitude },#{location.longitude}8&zoom=16&size=300x300&sensor=false&markers=#{location.latitude}%2C#{location.longitude}", :class => 'google-image'%>
- 
-        <p style="color:white;padding-bottom:2%">Electric Oak</p>
-        </div>
-      <% end %>
-    </div>
-      
-   
-     <div class="span7">
-       <% if @old_locations.count > 0 %>
-        <h1>Past Shows</h1>
-        <% end %>
-        <% @old_locations.each do |location| %>
-          <div class="news roundme"  >
-          <h4><%= location.title%></h4>
-          <p> <%= location.description %></p>
-          <p><b>Date:</b> <%= location.date.strftime("%B %d, %Y")%></p>
-          <p>
-            <b>Address:</b>
-            <%= location.address %>
-          </p>
-          <p style="color:white;padding-bottom:2%">Electric Oak</p>
-          </div>
-        <% end %>
-      </div>
-      
-      
-    
-  
+     <%= content_tag :h1, "Upcoming Shows" if @locations.count > 0 %>
+     <%= render :partial => "location", collection: @locations, locals: {show_map: true, show_contact: true}%>
+   </div>
+   <div class="span7">
+      <%= content_tag :h1, "Past Shows" if @old_locations.count > 0 %>
+      <%= render :partial => "location", collection: @old_locations, :as =>:location, locals: {show_map: false,show_contact: false}%>
+   </div>
 </div>
-
-
 
 <%= javascript_tag do %>
  panel($('.span7'));
