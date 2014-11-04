@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
+  caches_page :new
   def index
 
     respond_to do |format|
@@ -14,7 +15,7 @@ class MessagesController < ApplicationController
     @message = Message.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.json { render json: @message }
     end
   end
